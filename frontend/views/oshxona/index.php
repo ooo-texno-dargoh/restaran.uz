@@ -91,6 +91,6 @@ use yii\helpers\Html;
            }
        });
    }
-   setInterval(check,2000);
+   setInterval(check,500);
 
 </script>
