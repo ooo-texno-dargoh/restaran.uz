@@ -72,10 +72,25 @@ use yii\helpers\Html;
         </table>
     </div>
 </div>
-<script type="text/javascript">
-    function doSomething() {
-        alert('This pops up every 5 seconds and is annoying!');
-    }
-    setInterval(doSomething, 5000);
-</script>
+<script>
+   function check() {
+       $.ajax({
+           type: "POST",
+           url: '<?php echo Yii::$app->request->baseUrl. '/oshxona' ?>',
+           data:{
+             have:'bla'
+           },
+           // The key needs to match your method's input parameter (case-sensitive).
+           contentType: "application/json; charset=utf-8",
+           dataType: "json",
+           success: function(data){
+               console.log(data);
+           },
+           failure: function(errMsg) {
+               alert(errMsg);
+           }
+       });
+   }
+   setInterval(check,2000);
 
+</script>
