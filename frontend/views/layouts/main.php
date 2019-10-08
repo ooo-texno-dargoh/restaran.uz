@@ -20,7 +20,7 @@ if (Yii::$app->controller->action->id === 'login') {
         
         backend\assets\AppAsset::register($this);
     } else {
-        app\assets\AppAsset::register($this);
+        frontend\assets\AppAsset::register($this);
     }
 
     dmstr\web\AdminLteAsset::register($this);

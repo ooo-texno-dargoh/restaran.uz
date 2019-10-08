@@ -1,0 +1,75 @@
+<?php
+
+use yii\widgets\DetailView;
+
+/* @var $this yii\web\View */
+/* @var $model frontend\models\AsosSlave */
+?>
+<div class="asos-slave-view">
+ 
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'id',
+            'tovar_id',
+            'tovar_nom',
+            'izm_id',
+            'izm1',
+            'tulov_id',
+            'seriya',
+            'polka',
+            'srok',
+            'turi',
+            'resept',
+            'qrkod',
+            'kol',
+            'kol_in',
+            'sena',
+            'sena_in',
+            'summa',
+            'summa_in',
+            'summa_all',
+            'sotish',
+            'sotish_in',
+            'foiz',
+            'foiz_in',
+            'subkod',
+            'user_id',
+            'changedate',
+            'asos_id',
+            'del_flag',
+            'kol_ost',
+            'kol_in_ost',
+            'summa_ost',
+            'summa_in_ost',
+            'summa_all_ost',
+            'sena_d',
+            'sena_in_d',
+            'sotish_d',
+            'sotish_in_d',
+            'zakaz',
+            'zakaz_ok',
+            'zakaz_end',
+            'zakaz_see',
+            'zakaz_print',
+            'zakaz_gapir',
+            'foiz_ch2',
+            'foiz_schet',
+            'foiz_opt1',
+            'foiz_opt2',
+            'opt1',
+            'opt1_pl',
+            'opt1_in',
+            'opt1_pl_in',
+            'opt2',
+            'opt2_pl',
+            'opt2_in',
+            'opt2_pl_in',
+            'schet',
+            'schet_in',
+            'ch2',
+            'ch2_in',
+        ],
+    ]) ?>
+
+</div>

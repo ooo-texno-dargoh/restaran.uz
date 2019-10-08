@@ -503,7 +503,7 @@ public function actionTxfdf()
 
         if(Yii::$app->request->post('andnac')) {
             $andnac = Yii::$app->request->post('andnac');
-            AsosSlave::updateAll(['zakaz'=>date('Y-m-d H:i:i')],['asos_id'=>$andnac,'zakaz'=> Null]);
+            AsosSlave::updateAll(['zakaz'=>date('Y-m-d H:i:i'),'ch2'=>0],['asos_id'=>$andnac,'zakaz'=> Null]);
         }
         if(Yii::$app->request->post('andchek')) {
             $andnac = Yii::$app->request->post('andchek');

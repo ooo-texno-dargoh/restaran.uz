@@ -1,4 +1,6 @@
 <?php
+use develandoo\notification\Push;
+
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
     require(__DIR__ . '/../../common/config/params-local.php'),
@@ -26,6 +28,7 @@ return [
 
         'request' => [
             'csrfParam' => '_csrf-frontend',
+
         ],
         'i18n' => [
             'translations' => [
@@ -67,6 +70,21 @@ return [
             'rules' => [
             ],
         ],
+
+        'push' => [
+            'class' => 'develandoo\notification\Push',
+            'options' => [
+                'returnInvalidTokens' => true //default false
+            ],
+            'apnsConfig' => [
+                'environment' => Push::APNS_ENVIRONMENT_PRODUCTION or Push::APNS_ENVIRONMENT_SANDBOX,
+                'pem' => 'PEM_FILE_ABS_URL',
+                'passphrase' => 'YOUR_PASS_PHRASE', //optional
+            ],
+            'gcmConfig' => [
+                'apiAccessKey' => 'YOUR_GCM_API_KEY'
+            ]
+        ]
 
     ],
     'params' => $params,
